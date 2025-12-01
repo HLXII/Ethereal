@@ -65,7 +65,8 @@ public static partial class Monsters
         await WhenReady();
 
         GameController.Instance.CompleteMonsterList.Add(monster);
-
+        GameController.Instance.ActiveMonsterList.Add(monster);
+        
         Monster goMonster = monster.GetComponent<Monster>();
         await Referenceables.Add(goMonster);
 
